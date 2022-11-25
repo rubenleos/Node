@@ -7,8 +7,11 @@ const cors = require('cors');
 
 /*
 * IMPORTAR RUTAS
+
+this is server
 */
 
+const usersRoutes = require('./ROUTES/userRoutes');
 
 const port = process.env.PORT || 3000;
 
@@ -28,6 +31,10 @@ app.set('port', port);
 /*
 * LLAMADO DE LAS RUTAS
 */
+
+usersRoutes(app);
+
+
 
 
 
