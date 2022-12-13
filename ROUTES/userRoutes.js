@@ -1,4 +1,4 @@
-const userController =require('../models/user');
+const userController = require('../controller/userController');
 
 module.exports = (app) =>{
 
@@ -7,7 +7,9 @@ module.exports = (app) =>{
     //Put -> Actualisar datos
     //Delete -->Eliminar Datos
 
-    app.post('/api/users/create' ,userController.register);
+    app.post('/api/users/create',userController.register);
+    app.post('/api/users/login', userController.login);
+    app.get('/api/users/contratos', userController.contratos)
 
     
 }

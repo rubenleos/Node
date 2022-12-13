@@ -1,22 +1,17 @@
 const mysql = require('mysql');
-const User = require('../models/user');
 
 const db = mysql.createConnection({
-    host:'localhost',
-    user:'root',
-    password:'password',
-    databvase:'udemy_delivery'
+    host: '52.9.145.214',
+    port:'3306',
+    user: 'root',
+    password: 'X3ryu5IPBX.TxMT3l3c0m',
+    database: 'contract'
 });
 
-db.connect(function(err){
-
-    if(err) throw err;
-    console.log('database connected');
-    
-
-
+db.connect(function(err) {
+    if (err) throw err;
+    console.log('DATABASE CONNECTED!');
 });
-module.exports =User ; 
 
-
+module.exports = db;
 
